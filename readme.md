@@ -23,3 +23,22 @@ The basic Webpack config uses babel and postcss to transpile your src code to pr
 
 ### SCSS/CSS
 We have made an opinionated choice to use SCSS here as it tracks with our internal development expectations. You are free to work in raw CSS or another abstraction. A normalize css file has been added for convenience.
+
+### API Source
+We are using a basic mockend API as described by `.mockend.json` there should be no need to modify this resource. The API does not provide photos, as a placeholder please use `https://unsplash.com/` or a simple random image url from `https://picsum.photos/410/200` (The last two params of the url describe the size).
+
+##### Posts Endpoint: 
+`https://mockend.com/Wide-Eye-Creative/technical-boilerplate/posts`
+
+##### Sample response object:
+
+```
+{
+  "authorName": "GXQaREWzuU",
+  "excerpt": "PcHAQIWuEY",
+  "id": 1,
+  "publishedDate": "2001-12-01T16:43:31Z",
+  "title": "MEDyfLxqeF",
+  "views": 56
+}
+```
