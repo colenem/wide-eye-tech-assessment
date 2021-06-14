@@ -19,7 +19,7 @@ The basic Webpack config uses babel and postcss to transpile your src code to pr
 #### Available Commands:
 - `npm run build` will build production assets to the `./build` folder
 - `npm run start` will start the dev server
-- `npm run watch` will watch js/scss file changes and will display error details
+- `npm run start` will watch js/scss file changes and will display error details
 
 ### SCSS/CSS
 We have made an opinionated choice to use SCSS here as it tracks with our internal development expectations. You are free to work in raw CSS or another abstraction. A normalize css file has been added for convenience.
