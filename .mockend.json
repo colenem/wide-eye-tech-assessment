@@ -1,0 +1,9 @@
+{
+  "Post": {
+    "title": "string",
+    "views": "int",
+    "publishedDate": "date",
+    "authorName": "string",
+    "excerpt": "string"
+  }
+}
