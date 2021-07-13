@@ -13,7 +13,7 @@ The repo provided here has a basic file structure and boilerplate for a small st
 3. Run `npm i` to add node_modules
 4. Run `npm run watch`
 
-####Do not open a pull request to this repo.
+#### Do not open a pull request to this repo.
 
 ### Webpack
 The basic Webpack config uses babel and postcss to transpile your src code to production ready assets. ES6 support is included, however some polyfills will likley be needed if using specific js methods.
