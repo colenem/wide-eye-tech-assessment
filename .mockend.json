@@ -1,9 +1,25 @@
 {
   "Post": {
-    "title": "string",
-    "views": "int",
-    "publishedDate": "date",
-    "authorName": "string",
-    "excerpt": "string"
+    "title": {
+      "string": {}
+    },
+    "views": {
+      "int": {
+        "min": 1,
+        "max": 500
+      }
+    },
+    "publishedDate": {
+      "dateTime": {
+        "min": "2018-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
+      }
+    },
+    "authorName": {
+      "string": {}
+    },
+    "excerpt": {
+      "string": {}
+    }
   }
 }
