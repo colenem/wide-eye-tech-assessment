@@ -56,16 +56,9 @@ const CSSLoader = {
         loader: 'sass-loader',
         options: {
           sourceMap: false,
-          outputStyle: 'nested',
-          implementation: require('node-sass')
+          implementation: require('sass')
         }
-    }, {
-      loader: 'sass-resources-loader',
-      options: {
-        sourceMap: false,
-        resources:  './src/scss/**/*.scss',
-      }
-    },
+    }
   ],
 };
 

@@ -11,11 +11,11 @@
   "author": "Wide Eye Creative",
   "license": "UNLICENSED",
   "engines": {
-		"node": "^14.16.1"
-	},
+    "node": "^14.16.1"
+  },
   "repository": {
-		"type": "git"
-	},
+    "type": "git"
+  },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
@@ -28,7 +28,6 @@
     "eslint-loader": "^2.2.1",
     "eslint-plugin-import": "^2.18.2",
     "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.12.0",
     "postcss-import": "^12.0.1",
     "postcss-load-config": "^2.1.0",
     "postcss-loader": "^3.0.0",
@@ -43,5 +42,8 @@
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "sass": "^1.36.0"
   }
 }
