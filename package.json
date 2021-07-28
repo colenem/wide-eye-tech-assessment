@@ -41,9 +41,7 @@
     "stylelint-webpack-plugin": "^0.10.5",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2"
-  },
-  "dependencies": {
+    "webpack-dev-server": "^3.7.2",
     "sass": "^1.36.0"
   }
 }
