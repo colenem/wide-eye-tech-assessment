@@ -29,7 +29,7 @@ We have made an opinionated choice to use SCSS here as it tracks with our intern
 ### API Source
 We are using a basic mockend API as described by `.mockend.json` there should be no need to modify this resource. The API returns an array of objects with all the data needed for the task.
 ##### Posts Endpoint: 
-`https://mockend.com/Wide-Eye-Creative/technical-boilerplate/posts`
+`https://mockend.com/Wide-Eye-Creative/technical-test-2022/posts`
 
 ##### Sample response object:
 
