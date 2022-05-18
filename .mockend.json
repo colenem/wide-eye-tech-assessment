@@ -1,7 +1,7 @@
 {
   "Post": {
     "title": {
-      "regexp": "[A-Z][a-z]{5,20}"
+      "loremWords": { "minLength": 5, "maxLength": 20 }
     },
     "views": {
       "int": {
@@ -19,7 +19,13 @@
       "string": {}
     },
     "excerpt": {
-      "string": {}
+      "loremSentences": { "minLength": 2, "maxLength": 5 }
+    },
+    "content": {
+      "loremParagraphs": { "minLength": 50, "maxLength": 200 }
+    },
+    "photo": {
+      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/1080"
     }
   }
 }
