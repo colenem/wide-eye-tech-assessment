@@ -13,7 +13,7 @@ The repo provided here has a basic file structure and boilerplate for a small st
 3. Run `npm i` to add node_modules
 4. Run `npm run watch`
 
-#### Do not open a pull request to this repo.
+#### Do not open a pull request to this repo. Clone into your own repo and make your changes there.
 
 ### Webpack
 The basic Webpack config uses babel and postcss to transpile your src code to production ready assets. ES6 support is included, however some polyfills will likley be needed if using specific js methods.
@@ -27,8 +27,7 @@ The basic Webpack config uses babel and postcss to transpile your src code to pr
 We have made an opinionated choice to use SCSS here as it tracks with our internal development expectations. You are free to work in raw CSS or another abstraction. A normalize css file has been added for convenience.
 
 ### API Source
-We are using a basic mockend API as described by `.mockend.json` there should be no need to modify this resource. The API does not provide photos, as a placeholder please use `https://unsplash.com/` or a simple random image url from `https://picsum.photos/410/200` (The last two params of the url describe the size).
-
+We are using a basic mockend API as described by `.mockend.json` there should be no need to modify this resource. The API returns an array of objects with all the data needed for the task.
 ##### Posts Endpoint: 
 `https://mockend.com/Wide-Eye-Creative/technical-boilerplate/posts`
 
@@ -36,11 +35,13 @@ We are using a basic mockend API as described by `.mockend.json` there should be
 
 ```
 {
-  "authorName": "GXQaREWzuU",
-  "excerpt": "PcHAQIWuEY",
-  "id": 1,
-  "publishedDate": "2001-12-01T16:43:31Z",
-  "title": "MEDyfLxqeF",
-  "views": 56
+  authorName: "iRRBQH4mDe"
+  content: "Nam corrupti porro, dignissimos accusantium quae veritatis expedita, a consectetur officia sint, perferendis officia odio."
+  excerpt: "A."
+  id: 1
+  photo: "https://picsum.photos/seed/44940/1920/1080"
+  publishedDate: "2020-12-21T14:19:52Z"
+  title: "nihil nisi sed"
+  views: 17
 }
 ```

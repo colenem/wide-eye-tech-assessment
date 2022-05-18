@@ -19,10 +19,10 @@
       "string": {}
     },
     "excerpt": {
-      "loremSentences": { "minLength": 2, "maxLength": 5 }
+      "loremSentences": { "minLength": 50, "maxLength": 100 }
     },
     "content": {
-      "loremParagraphs": { "minLength": 50, "maxLength": 200 }
+      "loremParagraphs": { "minLength": 100, "maxLength": 300 }
     },
     "photo": {
       "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/1080"
