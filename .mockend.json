@@ -1,7 +1,7 @@
 {
   "Post": {
     "title": {
-      "string": {}
+      "regexp": "[A-Z][a-z]{5,20}"
     },
     "views": {
       "int": {
