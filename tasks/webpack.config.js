@@ -10,6 +10,7 @@ module.exports = {
     rules: [
       loaders.CSSLoader,
       loaders.JSLoader,
+      loaders.HBSLoader,
       loaders.ESLintLoader,
     ]
   },
@@ -19,6 +20,7 @@ module.exports = {
   plugins: [
     plugins.MiniCssExtractPlugin,
     plugins.StyleLintPlugin,
+    plugins.HtmlWebpackPlugin,
   ],
   output: {
     path: path.resolve(__dirname, '../build'),

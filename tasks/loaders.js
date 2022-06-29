@@ -19,6 +19,20 @@ module.exports = {
   JSLoader: JSLoader
 };
 
+const HBSLoader = {
+  test: /\.hbs$/,
+  exclude: /node_modules/,
+  use: {
+    loader: 'handlebars-loader',
+    options: {
+      minify: false,
+    },
+  }
+};
+module.exports = {
+  HBSLoader: HBSLoader
+};
+
 const ESLintLoader = {
   test: /\.js$/,
   enforce: 'pre',
@@ -64,6 +78,7 @@ const CSSLoader = {
 
 module.exports = {
   JSLoader: JSLoader,
+  HBSLoader: HBSLoader,
   ESLintLoader: ESLintLoader,
   CSSLoader: CSSLoader,
 };
