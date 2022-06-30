@@ -28,6 +28,7 @@
     "eslint": "^6.1.0",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-import": "^2.18.2",
+    "file-loader": "^6.2.0",
     "handlebars": "^4.7.7",
     "handlebars-loader": "^1.7.2",
     "html-webpack-plugin": "^4.5.2",
@@ -46,6 +47,7 @@
     "style-loader": "^1.0.0",
     "stylelint": "^10.1.0",
     "stylelint-webpack-plugin": "^0.10.5",
+    "url-loader": "^4.1.1",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"

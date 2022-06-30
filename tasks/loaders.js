@@ -26,11 +26,28 @@ const HBSLoader = {
     loader: 'handlebars-loader',
     options: {
       minify: false,
+      inlineRequires: 'img/',
     },
   }
 };
 module.exports = {
   HBSLoader: HBSLoader
+};
+
+const IMGLoader = {
+  test: /\.(png|svg|jpg|jpeg|gif)$/i,
+  use: {
+    loader: 'file-loader',
+    options: {
+      esModule: false,
+      name: '[name].[ext]',
+      outputPath: 'images/',
+      publicPath: 'images/'
+    },
+  }
+};
+module.exports = {
+  IMGLoader: IMGLoader
 };
 
 const ESLintLoader = {
@@ -81,4 +98,5 @@ module.exports = {
   HBSLoader: HBSLoader,
   ESLintLoader: ESLintLoader,
   CSSLoader: CSSLoader,
+  IMGLoader: IMGLoader,
 };

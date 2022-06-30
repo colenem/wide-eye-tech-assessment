@@ -8,6 +8,7 @@ module.exports = {
   devtool: 'inline-source-map',
   module: {
     rules: [
+      loaders.IMGLoader,
       loaders.CSSLoader,
       loaders.JSLoader,
       loaders.HBSLoader,
