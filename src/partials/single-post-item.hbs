@@ -1,0 +1,18 @@
+{{#each this}}
+    <div class="post--item">
+        <div class="post--featured-img">
+            <img src="{{photo}}" alt="">
+        </div>
+        <div class="post--creation-deets">
+            <p class="date">{{publishedDate}}</p>
+            <p class="author">{{authorName}}</p>
+        </div>
+        <div class="post--title">
+            <h4>{{title}}</h4>
+        </div>
+        <p class="post--excerpt">{{excerpt}}</p>
+        <div class="link">
+            <a href="https://google.com" class="read-more">Read More</a>
+        </div>
+    </div>
+{{/each}}
