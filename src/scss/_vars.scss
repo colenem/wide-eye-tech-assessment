@@ -3,3 +3,21 @@
 
 $lightest: #ffffff;
 $darkest: #333333;
+
+$colors: (
+    primary: (
+        base: #381C75,
+        light: #7218E2,
+    ),
+    secondary: (
+        base: #FF6F76,
+        light: #FFCCC4,
+    ),
+    accent: (
+        base: #1C82F8,
+    ),
+    default: (
+        base: #140F21,
+        light: #fff,
+    )
+);

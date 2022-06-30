@@ -1,5 +1,6 @@
 // Styles go here.
 @use 'normalize';
 @use 'base';
-@import 'custom';
-@import '~bootstrap/scss/bootstrap';
+@use 'vars';
+@use 'functions';
+@use '~bootstrap/scss/bootstrap';

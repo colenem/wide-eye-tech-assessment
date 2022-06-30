@@ -1,0 +1,9 @@
+// grab color from SCSS Map
+@function color($key, $tone: 'base') {
+    @if map-has-key($colors, $key) {
+        @return map-get(map-get($colors, $key), $tone);
+    } @else {
+        @warn "The '#{$key}' in $colors doesn't exist.";
+        @return null;
+    }
+}
