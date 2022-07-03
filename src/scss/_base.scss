@@ -1,7 +1,55 @@
-@use 'vars' as v;
+@use 'vars' as *;
+@use 'functions' as *;
 
 body,
 html {
   font-size: 16px;
-  color: v.$darkest;
+  color: color( default, base );
+  font-family: $default-font;
+}
+
+h1 {
+  @include text( bold, 55px, 116% );
+
+  margin: 0 0 24px 0;
+}
+
+h5 {
+  @include text( bold, 10px, 120%, 0.1em, uppercase );
+
+  color: color( secondary, base );
+}
+
+p {
+  @include text( normal, 17px, 170% );
+}
+
+.hero {
+  background-color: color( primary, base );
+  color: color( default, light );
+  padding: 3rem 1rem;
+
+  @media ( min-width: 768px ) {
+    padding: 6rem 1rem 4rem 1rem;
+  }
+
+  .container-fluid {
+    max-width: 1440px;
+  }
+
+  &--content-left {
+    margin-top: 170px;
+  }
+
+  &-image {
+    img {
+      @media ( min-width: 768px ) {
+        position: absolute;
+        left: 45.69%;
+        right: 6.11%;
+        top: 22.49%;
+        bottom: 0%;
+      }
+    }
+  }
 }
