@@ -22,9 +22,10 @@ module.exports = {
     plugins.MiniCssExtractPlugin,
     plugins.StyleLintPlugin,
     plugins.HtmlWebpackPlugin,
+    plugins.jQueryPlugin,
   ],
   output: {
     path: path.resolve(__dirname, '../build'),
     filename: '[name].bundle.js'
-  }
+  },
 };
