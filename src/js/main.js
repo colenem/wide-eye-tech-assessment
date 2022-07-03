@@ -1,23 +1,20 @@
 import 'bootstrap';
 
 const apiURL                = "https://mockend.com/Wide-Eye-Creative/technical-test-2022/posts";
+const archivePostsTemplate  = require( '../partials/single-post-item.hbs' );
 const archivePostsContainer = document.querySelector( '.posts__container' );
 
-let archivePostsTemplate = require( '../partials/single-post-item.hbs' );
-let allPosts             = null;
-let postsSubset          = null;
-let postIndex            = 0;
-let sortedPostsSubset    = null;
+let allPosts          = null;
+let postsSubset       = null;
+let sortedPostsSubset = null;
+let previousPostId    = 0;
 // let loadMorePosts        = document.querySelector( '.load-more-posts' );
 
 /**
  * TODO:
- * 1. hookup event listener to load more posts when link is click (must append)
- * 2. add navigation template
- * 3. add cta section
- * 4. add footer section
- * 5. style site
- * 6. wrap partials in main tag
+ * 1. site styles
+ * 2. add social icons to footer section
+ * 3. hookup event listener to load more posts when link is click (must append)
  */
 
 fetch( apiURL )
@@ -26,21 +23,23 @@ fetch( apiURL )
   })
   .then( ( data ) => {
     allPosts          = data;
-    postsSubset       = getPostSubset( allPosts, postIndex );
+    postsSubset       = getPostSubset( allPosts, previousPostId );
     sortedPostsSubset = getSortedPostsSubset( postsSubset );
 
-    renderHTML();
+    renderHTML( sortedPostsSubset );
   })
   .then();
 
-function renderHTML() {
+function renderHTML( posts ) {
   // compile and render HTML using handlebars template partial
-  archivePostsContainer.innerHTML = archivePostsTemplate( sortedPostsSubset );
+  archivePostsContainer.insertAdjacentHTML( 'afterbegin', archivePostsTemplate( posts ) );
+  // archivePostsContainer.innerHTML = archivePostsTemplate( sortedPostsSubset );
 }
 
 // Get six posts at a time based on last index position
 function getPostSubset( posts, index ) {
-  return allPosts.slice( postIndex, index + 6, posts );
+  previousPostId += 6;
+  return allPosts.slice( index, index + 6, posts );
 }
 
 function getSortedPostsSubset( posts ) {
