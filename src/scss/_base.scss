@@ -14,6 +14,12 @@ h1 {
   margin: 0 0 24px 0;
 }
 
+h2 {
+  @include text( bold, 40px, 125% );
+
+  margin-bottom: 16px;
+}
+
 h5 {
   @include text( bold, 10px, 120%, 0.1em, uppercase );
 
@@ -79,6 +85,10 @@ nav.navbar-expand-lg .navbar-nav .nav-link {
   color: color( default, light );
   padding: 2rem 1rem;
 
+    @media ( min-width: 768px ) {
+      margin-bottom: 126px;
+    }
+
   /* @media ( min-width: 992px ) {
     padding: 6rem 1rem 4rem 1rem;
   } */
@@ -108,5 +118,11 @@ nav.navbar-expand-lg .navbar-nav .nav-link {
       top: 17.19%;
       bottom: 0%;
     }
+  }
+}
+
+.about-us {
+  @media ( min-width: 768px ) {
+    margin-bottom: 64px;
   }
 }
