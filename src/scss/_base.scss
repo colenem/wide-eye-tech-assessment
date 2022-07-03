@@ -24,32 +24,89 @@ p {
   @include text( normal, 17px, 170% );
 }
 
+.container-fluid {
+  max-width: 1440px;
+}
+
+.navigation-menu {
+  background-color: color( primary, base );
+  color: color( default, light );
+  height: 124px;
+  padding-top: 30px;
+
+  .container-fluid {
+    align-items: flex-start;
+  }
+}
+
+nav.navbar-expand-lg .navbar-nav .nav-link {
+  @include text( bold, 15px, 100% );
+
+  color: color( default, light );
+
+  @media (min-width: 768px) {
+      padding-left: .75rem;
+      padding-right: .75rem;
+  }
+}
+
+.navbar-collapse {
+  text-align: right;
+  padding: 0px 12px;
+
+  @media ( min-width: 768px ) {
+    padding: 0;
+  }
+}
+
+.navbar-brand {
+  margin-right: 1.5rem;
+}
+
+.subscribe-button {
+  @include text( bold, 15px, 100% );
+
+  background-color: color( secondary, base );
+  color: color( default, base );
+  border-radius: 8px;
+  border: none;
+  width: 192px;
+  height: 48px;
+}
+
 .hero {
   background-color: color( primary, base );
   color: color( default, light );
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
 
-  @media ( min-width: 768px ) {
+  /* @media ( min-width: 992px ) {
     padding: 6rem 1rem 4rem 1rem;
-  }
+  } */
 
   .container-fluid {
     max-width: 1440px;
   }
 
   &--content-left {
-    margin-top: 170px;
+    margin-top: 100px;
+
+    @media ( min-width: 768px ) {
+      margin-top: 170px;
+    }
+  }
+
+  &--content-right {
+    display: flex;
+    justify-content: flex-end;
   }
 
   &-image {
-    img {
-      @media ( min-width: 768px ) {
-        position: absolute;
-        left: 45.69%;
-        right: 6.11%;
-        top: 22.49%;
-        bottom: 0%;
-      }
+    @media ( min-width: 992px ) {
+      position: absolute;
+      left: 49.19%;
+      right: 6.11%;
+      top: 17.19%;
+      bottom: 0%;
     }
   }
 }
