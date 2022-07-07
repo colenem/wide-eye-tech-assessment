@@ -1,0 +1,78 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+@use 'functions' as *;
+
+.hero {
+  @include padding-lr;
+
+  background-color: color( primary, base );
+  color: color( default, light );
+  margin-bottom: 64px;
+
+  @media (min-width: 992px) {
+      margin-bottom: -40px;
+  }
+
+  &__container {
+    @media (min-width: 768px) {
+      padding-top: 24px;
+      padding-bottom: 48px;
+    }
+
+    @media (min-width: 992px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    &--inner {
+      padding: 0;
+      justify-content: space-between;
+
+      @media (min-width: 768px) {
+        align-items: center;
+      }
+    }
+  }
+
+  &__content-left,
+  &__content-right {
+    margin-bottom: 48px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__content-left {
+    @media (min-width: 768px) {
+      padding-right: 32px;
+    }
+
+    @media (min-width: 992px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 64px;
+    }
+
+    @media (min-width: 1200px) {
+      padding-bottom: 0;
+    }
+
+    .tagline {
+      color: color( secondary, base );
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__content-right {
+    @media (min-width: 768px) {
+      padding-left: 0;
+      padding-right: 6px;
+      text-align: right;
+    }
+  }
+}
