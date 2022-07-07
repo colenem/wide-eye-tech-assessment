@@ -2,6 +2,7 @@
 @use '~bootstrap/scss/bootstrap';
 @use 'normalize';
 @use 'vars';
+@use 'mixins';
 @use 'functions';
 @use 'partials/navigation';
 @use 'partials/hero';
@@ -11,3 +12,5 @@
 @use 'partials/subscribe-cta';
 @use 'partials/footer';
 @use 'base';
+
+@import 'aos/dist/aos.css';
