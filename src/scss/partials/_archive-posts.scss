@@ -1,0 +1,65 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+@use 'functions' as *;
+
+.grid-module__container {
+  @include padding-lr;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+
+  .content {
+    margin-bottom: 48px;
+  }
+}
+
+.archive-posts {
+  margin-bottom: 90px;
+
+  @media (min-width: 992px) {
+    margin-bottom: 120px;
+  }
+}
+
+.posts__container {
+  @include padding-lr;
+
+  flex-direction: column;
+  margin-bottom: 48px;
+
+  @media ( min-width: 768px ) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr); // allows for dynamic addition of rows
+    grid-column-gap: 16px;
+    grid-row-gap: 32px;
+    margin: 0 auto 48px;
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, minmax(0, 1fr)); // allows for dynamic addition of rows
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: 1400px) {
+    padding: 0;
+  }
+}
+
+.more-posts__container {
+  text-align: center;
+}
+
+.load-more-posts {
+  color: color( accent, base );
+  margin-bottom: 48px;
+  text-decoration: none;
+  border-bottom: 3px solid;
+
+  &:hover,
+  &:focus {
+    color: darken( color( accent, base ), 12%);
+  }
+}
