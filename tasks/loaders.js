@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
 
 const JSLoader = {
   test: /\.js$/,
@@ -6,7 +7,6 @@ const JSLoader = {
   use: {
     loader: 'babel-loader',
     options: {
-      presets: ['@babel/preset-env'],
       env: {
         production: {
           presets: ['minify']
@@ -26,6 +26,7 @@ const HBSLoader = {
     loader: 'handlebars-loader',
     options: {
       minify: false,
+      helperDirs: [ path.resolve(__dirname, '../src/js/helpers') ],
       inlineRequires: 'img/',
     },
   }
