@@ -1,0 +1,79 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+@use 'functions' as *;
+
+.subscribe {
+  &-cta {
+    background-color: color(primary, base);
+    margin-bottom: 64px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 86px;
+    }
+
+    &__container {
+      &--inner {
+        padding: 48px 32px;
+
+        @media (min-width: 768px) {
+          align-items: center;
+          padding-top: 64px;
+          padding-bottom: 64px;
+        }
+
+        @media (min-width: 1200px) {
+          padding-top: 90px;
+          padding-bottom: 90px;
+        }
+
+        @media (min-width: 1400px) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        h1 {
+          color: color(default, light );
+          margin-bottom: 48px;
+
+          @media (min-width:768px) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .subscribe__button-container {
+      margin-left: 0 !important;
+    }
+
+    .subscribe__button {
+      width: 150px;
+      height: 48px;
+      border-radius: 0 8px 8px 0;
+
+      @media (min-width: 576px) and (max-width: 767.99px),
+      (min-width: 1200px) {
+        width: 211px;
+      }
+    }
+  }
+
+  &__email-input {
+    border: none;
+  }
+}
+
+.subheading {
+  &__email,
+  &__disclaimer {
+    color: color( default, light );
+  }
+
+  &__email {
+    @include text( bold, 9px, 120%, 0.1em, uppercase );
+  }
+
+  &__disclaimer {
+    @include text( normal, 11px, 150% );
+  }
+}
