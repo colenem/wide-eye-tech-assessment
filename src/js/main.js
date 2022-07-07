@@ -12,9 +12,10 @@ let previousPostId    = 0;
 
 /**
  * TODO:
- * 1. site styles
- * 2. add social icons to footer section
- * 3. hookup event listener to load more posts when link is click (must append)
+ * 1. add hover effect for mobile menu icon
+ * 2. hookup event listener to load more posts when link is clicked if time permits (must append)
+ * 3. make sure read more/more posts redirect to google.com
+ * 4. use title as img alt text
  */
 
 fetch( apiURL )
@@ -27,24 +28,34 @@ fetch( apiURL )
     sortedPostsSubset = getSortedPostsSubset( postsSubset );
 
     renderHTML( sortedPostsSubset );
-  })
-  .then();
+  });
 
 function renderHTML( posts ) {
   // compile and render HTML using handlebars template partial
-  archivePostsContainer.insertAdjacentHTML( 'afterbegin', archivePostsTemplate( posts ) );
-  // archivePostsContainer.innerHTML = archivePostsTemplate( sortedPostsSubset );
+  archivePostsContainer.insertAdjacentHTML( 'beforeend', archivePostsTemplate( posts ) );
 }
 
 // Get six posts at a time based on last index position
 function getPostSubset( posts, index ) {
   previousPostId += 6;
-  return allPosts.slice( index, index + 6, posts );
+  let subset = allPosts.slice( index, index + 6, posts );
+
+  // change date format to Month Day, Year ( March 05, 2011 )
+  changePusblishDateFormat( subset );
+  return subset;
 }
 
 function getSortedPostsSubset( posts ) {
   return posts.sort( ( a, b ) => ( a.authorName.toUpperCase() < b.authorName.toUpperCase() ) ? -1 : 
     ( a.authorName.toUpperCase() > b.authorName.toUpperCase() ) ? 1 : 0 );
+}
+
+function changePusblishDateFormat( posts ) {
+  posts.forEach( post => {
+    const publishedDate = new Date( post.publishedDate );
+    const dateFormatOptions = { month: 'long', day: 'numeric', year: 'numeric' };
+    post.publishedDate = publishedDate.toLocaleDateString( 'en-us', dateFormatOptions );
+  });
 }
 
 // loadMorePosts.addEventListener( 'click', () => {
