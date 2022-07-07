@@ -3,4 +3,11 @@
 @use 'normalize';
 @use 'vars';
 @use 'functions';
+@use 'partials/navigation';
+@use 'partials/hero';
+@use 'partials/digital-big-thinkers';
+@use 'partials/archive-posts';
+@use 'partials/single-post-item';
+@use 'partials/subscribe-cta';
+@use 'partials/footer';
 @use 'base';
