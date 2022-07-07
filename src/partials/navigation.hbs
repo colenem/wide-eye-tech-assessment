@@ -1,31 +1,41 @@
 <nav class="navbar navbar-expand-lg navigation-menu">
-	<div class="container-fluid">
+	<div class="navigation-menu__container container-fluid padding-lr">
 		<a class="navbar-brand" href="#">
 			<img src="../img/logo.svg" alt="Wide Eye Logo"></a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-items-wrapper" aria-controls="menu-items-wrapper" aria-expanded="false" aria-label="Toggle navigation menu">
-			<img src="../img/menu-icon.svg" alt="mobile menu icon" width="50px">
-		</button>
-		<div class="collapse navbar-collapse" id="menu-items-wrapper">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Our Work</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Impact</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Resource</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">News</a>
-				</li>
-			</ul>
-            <div class="button__container">
-                <button type="button" class="btn btn-primary btn-lg subscribe-button">Subscribe</button>
-            </div>
+			<button class="navbar-toggler mobile-menu-button" type="button" data-bs-toggle="collapse" data-bs-target="#menu-items__container" aria-controls="menu-items__container" aria-expanded="false" aria-label="mobile menu button">
+				<svg width="50" height="23" viewBox="0 0 22.5 10" fill="none" version="1.1" class="mobile-menu-button__icon"
+					xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+					<g id="mobile-menu-button__shape" transform="translate(-0.75040269,-4.2278332)">
+						<rect fill="#ffffff" fill-opacity="1" stroke="none" stroke-width="17.1813" id="rect2388" width="15.170307"
+							height="0.80000001" x="7.665628" y="4.5675306" />
+						<rect fill="#ffffff" fill-opacity="1" stroke="none" stroke-width="20.5356" id="rect3022" width="21.671867"
+							height="0.80000001" x="1.164469" y="8.8278332" />
+						<rect fill="#ffffff" fill-opacity="1" stroke="none" stroke-width="14.5208" id="rect3186" width="10.835934"
+							height="0.80000001" x="11.998144" y="13.088136" />
+					</g>
+				</svg>
+			</button>
+			<div class="collapse navbar-collapse" id="menu-items__container">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Our Work</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Impact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Resources</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">News</a>
+					</li>
+				</ul>
+				<div class="button__container">
+					<button type="button" class="subscribe__button button__text btn btn-lg btn-primary">Subscribe</button>
+				</div>
+			</div>
 		</div>
-	</div>
-</nav>
+	</nav>

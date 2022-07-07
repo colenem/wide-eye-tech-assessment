@@ -1,0 +1,79 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+@use 'functions' as *;
+
+.navigation-menu {
+  background-color: color( primary, base );
+  color: color( primary, light );
+  padding-top: 30px;
+
+  // .navigation-menu .navigation__container
+  #{&}__container {
+    margin: 0 32px 80px;
+    max-width: 1284px;
+    align-items: flex-start;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199.99px) {
+      margin-bottom: 54px;
+    }
+
+    @media (min-width: 1350px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: 1400px) {
+      padding: 0;
+    }
+  }
+
+  .mobile-menu-button {
+    padding: 6px 0 0;
+    border: none;
+    position: relative;
+    left: 8px;
+  }
+
+  .subscribe__button {
+    width: 192px;
+    height: 48px;
+  }
+}
+
+#menu-items__container {
+  text-align: right;
+  padding: 0px 12px;
+
+  @media ( min-width: 768px ) {
+    padding: 0;
+  }
+
+  .nav-item {
+    padding: 8px 12px 0;
+  }
+
+  a {
+    @include text( bold, 15px, 100% );
+
+    position: relative;
+    padding: 0 0 6px;
+    color: color( default, light );
+
+    &:hover,
+    &:focus {
+      color: color( secondary, light );
+    }
+
+    @include hover {
+      background-color: color( secondary, light );
+    }
+  }
+}
+
+.navbar-brand {
+  margin-right: 1.5rem;
+}
