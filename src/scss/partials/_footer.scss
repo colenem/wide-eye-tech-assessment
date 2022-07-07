@@ -1,0 +1,79 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+@use 'functions' as *;
+
+.footer {
+  margin-bottom: 64px;
+  padding: 0 32px;
+
+  @media (min-width: 500px) {
+    padding: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 86px;
+  }
+
+  &__primary,
+  &__socials {
+    margin-bottom: 32px;
+  }
+
+  .nav-item {
+    padding: 8px 8px 0;
+  }
+
+  .nav-link {
+    position: relative;
+    padding: 0 0 4px;
+
+    &:hover,
+    &:focus {
+      color: color( primary, light );
+    }
+
+    @include hover {
+      background-color: color( primary, light );
+    }
+  }
+}
+
+.social__icon {
+  &:not(:last-child) {
+    margin-right: 32px;
+  }
+
+  svg {
+    fill: color( default, base );
+
+    &:hover,
+    &:focus {
+      fill: color( primary, light );
+    }
+  }
+}
+
+.icon {
+  &__facebook svg,
+  &__twitter svg,
+  &__instagram svg {
+    height: 22px;
+  }
+
+  &__facebook svg {
+    width: 12px;
+  }
+
+  &__twitter svg {
+    width: 18px;
+  }
+
+  &__instagram svg {
+    width: 16px;
+  }
+
+  &__youtube svg {
+    width: 20px;
+    height: 20px;
+  }
+}
