@@ -9,7 +9,7 @@
 
   // .navigation-menu .navigation__container
   #{&}__container {
-    margin: 0 32px 80px;
+    margin: 0 26px 80px 32px;
     max-width: 1284px;
     align-items: flex-start;
 
@@ -36,7 +36,11 @@
     padding: 0;
     border: none;
     position: relative;
-    left: 8px;
+    right: 6px;
+
+    @media (min-width: 768px) {
+      right: 0;
+    }
 
     &:hover {
       rect {
@@ -57,7 +61,6 @@
 
 #menu-items__container {
   text-align: right;
-  padding: 0px 12px;
 
   @media (min-width: 768px) {
     padding: 0;
