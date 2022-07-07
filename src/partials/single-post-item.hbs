@@ -1,18 +1,19 @@
 {{#each this}}
-    <div class="post--item col col-xs-12 col-md-4">
-        <div class="post--featured-img">
-            <img src="{{photo}}" alt="" width="410px" height="203px">
+    <div class="post__item col col-12">
+        <div class="post__featured-img">
+            <img src="{{photo}}" class="img-fluid" alt="">
         </div>
-        <div class="post--creation-deets">
-            <p class="date">{{publishedDate}}</p>
-            <p class="author">{{authorName}}</p>
-        </div>
-        <div class="post--title">
-            <h4>{{title}}</h4>
-        </div>
-        <p class="post--excerpt">{{excerpt}}</p>
-        <div class="link">
-            <a href="https://google.com" class="read-more">Read More</a>
+        <div class="content">
+            <div class="post__date-author">
+                <h5>{{publishedDate}}<span class="vertical-bar">|</span>{{authorName}}</h5>
+            </div>
+            <div class="post__title">
+                <h4>{{title}}</h4>
+            </div>
+            <p class="post__excerpt">{{excerpt}}</p>
+            <div class="link">
+                <a href="https://google.com" class="read-more">Read More</a>
+            </div>
         </div>
     </div>
 {{/each}}
