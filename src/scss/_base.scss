@@ -5,36 +5,36 @@
 body,
 html {
   font-size: 16px;
-  color: color( default, base );
+  color: color(default, base);
   font-family: $default-font;
 }
 
 h1 {
-  @include text( bold, 55px, 116% );
+  @include text(bold, 55px, 116%);
 
   margin: 0 0 24px 0;
 }
 
 h2 {
-  @include text( bold, 40px, 125% );
+  @include text(bold, 40px, 125%);
 
   margin-bottom: 16px;
 }
 
 h3 {
-  @include text( bold, 32px, 125% );
+  @include text(bold, 32px, 125%);
 }
 
 h4 {
-  @include text( 800, 22px, 130% );
+  @include text(800, 22px, 130%);
 }
 
 h5 {
-  @include text( bold, 10px, 120%, 0.1em, uppercase );
+  @include text(bold, 10px, 120%, 0.1em, uppercase);
 }
 
 p {
-  @include text( normal, 17px, 170% );
+  @include text(normal, 17px, 170%);
 }
 
 main {
@@ -44,27 +44,31 @@ main {
 .button {
   &__text,
   &__text-muted {
-    color: color( default, base );
+    color: color(default, base);
   }
 
   &__text {
-    @include text( bold, 15px, 100% );
+    @include text(bold, 15px, 100%);
   }
 
   &__text-muted {
-    @include text( normal, 13px, 135% );
+    @include text(normal, 13px, 135%);
   }
 }
 
 .subscribe__button {
-  background-color: color( secondary, base );
+  background-color: color(secondary, base);
   border-radius: 8px;
   border: none;
 
   &:hover,
   &:focus {
-    background-color: lighten( color( secondary, base ), 5% );
-    color: color( default, base );
+    background-color: lighten(color(secondary, base), 5%);
+    color: color(default, base);
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 3px 4px rgba(color(accent, base), 0.6);
   }
 }
 

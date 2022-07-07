@@ -3,8 +3,8 @@
 @use 'functions' as *;
 
 .navigation-menu {
-  background-color: color( primary, base );
-  color: color( primary, light );
+  background-color: color(primary, base);
+  color: color(primary, light);
   padding-top: 30px;
 
   // .navigation-menu .navigation__container
@@ -32,10 +32,21 @@
   }
 
   .mobile-menu-button {
-    padding: 6px 0 0;
+    margin-top: 6px;
+    padding: 0;
     border: none;
     position: relative;
     left: 8px;
+
+    &:hover {
+      rect {
+        fill: color(secondary, base);
+      }
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 2px 4px rgba( color(accent, base), 0.6);
+    }
   }
 
   .subscribe__button {
@@ -48,28 +59,33 @@
   text-align: right;
   padding: 0px 12px;
 
-  @media ( min-width: 768px ) {
+  @media (min-width: 768px) {
     padding: 0;
   }
 
   .nav-item {
-    padding: 8px 12px 0;
+    padding-bottom: 8px;
+
+    @media (min-width: 992px) {
+      padding: 8px 12px 0;
+    }
   }
 
   a {
-    @include text( bold, 15px, 100% );
+    @include text(bold, 15px, 100%);
 
+    display: inline-block;
     position: relative;
     padding: 0 0 6px;
-    color: color( default, light );
+    color: color(default, light);
 
     &:hover,
     &:focus {
-      color: color( secondary, light );
+      color: color(secondary, base);
     }
 
     @include hover {
-      background-color: color( secondary, light );
+      background-color: color(secondary, base);
     }
   }
 }
