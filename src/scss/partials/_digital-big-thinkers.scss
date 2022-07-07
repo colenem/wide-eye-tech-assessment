@@ -10,7 +10,7 @@
     margin-bottom: 64px;
   }
 
-  &__container {
+  div#{&}__container {
     @include padding-lr;
 
     @media (min-width: 768px) {
