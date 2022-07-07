@@ -1,19 +1,11 @@
 @use 'vars' as *;
 
-@mixin text( $font-weight, $font-size, $line-height, $letter-spacing: normal, $text-transform: none ) {
-    font-weight: $font-weight;
-    font-size: $font-size;
-    line-height: $line-height;
-    letter-spacing: $letter-spacing;
-    text-transform: $text-transform;
-}
-
 // grab color from SCSS Map
 @function color($key, $tone: 'base') {
     @if map-has-key($colors, $key) {
         @return map-get(map-get($colors, $key), $tone);
     } @else {
-        @warn "The '#{$key}' in $colors doesn't exist.";
+        @warn "'#{$key}' not found in $colors.";
         @return null;
     }
 }

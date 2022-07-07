@@ -1,0 +1,35 @@
+@use 'vars' as *;
+
+@mixin text( $font-weight, $font-size, $line-height, $letter-spacing: normal, $text-transform: none ) {
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    text-transform: $text-transform;
+}
+
+@mixin padding-lr {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+@mixin hover {
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        transform-origin: top left;
+        transition: transform 0.25s ease-out;
+        @content
+    }
+
+    &:hover {
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}
