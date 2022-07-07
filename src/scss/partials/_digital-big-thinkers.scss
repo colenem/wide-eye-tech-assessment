@@ -1,0 +1,24 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+@use 'functions' as *;
+
+.digital-big-thinkers {
+  background-color: color( default, light );
+  margin-bottom: 32px;
+
+  @media ( min-width: 768px ) {
+    margin-bottom: 64px;
+  }
+
+  &__container {
+    @include padding-lr;
+
+    @media (min-width: 768px) {
+      padding: 0;
+    }
+
+    @media (min-width: 992px) {
+        padding-top: 126px;
+    }
+  }
+}
